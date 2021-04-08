@@ -12,6 +12,8 @@ workflows:
           pkg-manager: pipenv
           test-tool: unittest 
       - azure-acr/build-and-push-image:
+          azure-username: lbartram@hotmail.co.uk
+          azure-password: Maver1ck73$
           login-server-name: leecontainerregistry73.azurecr.io
           registry-name: LeeContainerRegistry73
           repo: devops-bookstore-api
