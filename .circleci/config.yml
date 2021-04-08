@@ -13,8 +13,6 @@ workflows:
           test-tool: unittest 
       - azure-acr/build-and-push-image:
           login-server-name: leecontainerregistry73.azurecr.io
-          azure-username: lbartram@hotmail.co.uk
-          azure-password: Maver1ck73$
           registry-name: LeeContainerRegistry73
           repo: devops-bookstore-api
           tag: '1.$CIRCLE_BUILD_NUM'
