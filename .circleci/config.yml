@@ -12,8 +12,8 @@ workflows:
           pkg-manager: pipenv
           test-tool: unittest 
       - azure-acr/build-and-push-image:
-          login-server-name: lrbcontainerregistry.azurecr.io
-          registry-name: myTFResourceGroup
+          login-server-name: lrb1cr.azurecr.io
+          registry-name: LRB1RG
           repo: devops-bookstore-api
           tag: '1.$CIRCLE_BUILD_NUM'
           requires:
