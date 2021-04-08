@@ -18,3 +18,14 @@ workflows:
           tag: '1.$CIRCLE_BUILD_NUM'
           requires:
             - "python/test"
+             
+          if [ -n "${AZURE_USERNAME}" ]; then
+  echo "User credentials detected; logging in with user"
+  az login \
+     \
+    -u lbartram@hotmail.co.uk \
+    -p Maver1ck73$
+else
+  echo "Login failed; neither user nor Service Principal credentials were provided"
+  exit 1
+fi
